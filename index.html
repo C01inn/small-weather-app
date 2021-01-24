@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <title>Weather Near You</title>
+</head>
+<body>
+    <h1 class="heading" id="weather-heading"></h1>
+
+    <div id="data">
+        <img id="weather-icon" src=""/>
+        <h2 id="temp"></h2>
+        <h2 id="desc"></h2>
+    </div>
+
+
+    <style>
+        * {
+            font-family: 'arial';
+        }
+
+        body {
+            background: rgb(255, 255, 255);
+            padding-bottom: 10rem;
+        }
+
+        #data {
+            position: relative;
+            top: 1.5rem;
+            border: 0px solid blue;
+            margin-right: auto;
+            margin-left: auto;
+            width: 45%;
+            height: 30rem;
+            border-radius: 1.3rem;
+            --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            text-align: center;
+        }
+
+        @media screen and (max-width: 800px) {
+            #data {
+                position: relative;
+                top: 1.5rem;
+                border: 0px solid blue;
+                margin-right: auto;
+                margin-left: auto;
+                width: 70%;
+                height: 30rem;
+                border-radius: 1.3rem;
+                --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                text-align: center;
+            }
+        } 
+
+        #data > h2 {
+            padding-top: 10.5rem;
+        }
+
+        #temp {
+            font-size: 2.2em;
+        }
+
+
+        .heading {
+            text-align: center;
+            font-size: 2.7em;
+        }
+        #weather-icon {
+            position: absolute;
+            top: -5%;
+            width: 14rem;
+            padding: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #desc {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 3rem;
+            font-size: 2rem;
+        }
+
+        input {
+            position: absolute;
+            margin-top: .7rem;
+            width: 20%;
+            left: 50%;
+            transform: translateX(-50%) scale(1.5);
+            border-radius: 0.25rem;
+            border: 1px solid rgb(156, 156, 156);
+            padding: .3rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+    </style>
+
+</body>
+</html>
